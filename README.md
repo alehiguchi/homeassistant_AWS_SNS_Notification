@@ -37,11 +37,16 @@ aws:
       aws_access_key_id: [same as above]
       aws_secret_access_key: [same as above]
 
-## TEST
+## 3. TEST
+
+![Untitled](https://user-images.githubusercontent.com/45504305/175666351-17ae6ab6-8bf1-418f-990a-cdb38f5ee5f7.png)
 
 - Go to Developer Tools, YAML
 - Click Check Configuration
 - Click Restart and wait for HA to restart
+
+![Untitled (1)](https://user-images.githubusercontent.com/45504305/175666398-febeb28d-a2be-4f4a-a4c5-1ca36907ac04.png)
+
 - Still in Developer Tools, click on “Services”
 - Select the new notification service “sns_us_east_1”
 - In “Target”, use the topic name from AWS SNS
