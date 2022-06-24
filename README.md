@@ -21,10 +21,9 @@ If you do not download them, you will lose them and will have to recreate a new 
 
 ## 2. CONFIGURING HOME ASSISTANT TO SEND AWS SNS NOTIFICATIONS
 
-Add the lines in the configuration.yaml file from this repository to your configuration.yaml file
+Add the lines below to your configuration.yaml file, using your AWS Key ID and Access Key
 
 ```yaml
-
 aws:
   credentials:
     - name: AWS Account
