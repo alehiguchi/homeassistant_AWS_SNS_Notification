@@ -21,21 +21,7 @@ If you do not download them, you will lose them and will have to recreate a new 
 
 ## 2. CONFIGURING HOME ASSISTANT TO SEND AWS SNS NOTIFICATIONS
 
-- Add the lines below to configuration.yaml
-
-aws:
-credentials:
-- name: AWS Account
-    aws_access_key_id: [get the key id from previout steps]
-    aws_secret_access_key: [get the access key from previout steps]
-  notify:
-    # use the first credential defined in aws integration by default
-    - service: sns
-      region_name: us-east-1
-      name: sns_us_east_1
-      credential_name: AWS Account
-      aws_access_key_id: [same as above]
-      aws_secret_access_key: [same as above]
+Add the lines in the configuration.yaml file from this repository to your configuration.yaml file
 
 ## 3. TEST
 
