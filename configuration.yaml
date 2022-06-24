@@ -1,0 +1,35 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+template: !include templates.yaml
+
+wake_on_lan:
+
+switch:
+  - platform: wake_on_lan
+    mac: A0-29-19-0A-C1-9D
+    name: "Accenture Laptop"
+
+aws:
+  credentials:
+    - name: AWS Account
+      aws_access_key_id: ACCESS_KEY_ID_FROM_AWS
+      aws_secret_access_key: SECRET_ACCESS_KEY_ID_FROM_AWS
+  notify:
+    # use the first credential defined in aws integration by default
+    - service: sns
+      region_name: us-east-1
+      name: sns_us_east_1
+      credential_name: AWS Account
+      aws_access_key_id: ACCESS_KEY_ID_FROM_AWS
+      aws_secret_access_key: SECRET_ACCESS_KEY_ID_FROM_AWS
+
+
