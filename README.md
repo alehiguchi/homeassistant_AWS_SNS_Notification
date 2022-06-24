@@ -23,6 +23,23 @@ If you do not download them, you will lose them and will have to recreate a new 
 
 Add the lines in the configuration.yaml file from this repository to your configuration.yaml file
 
+```yaml
+
+aws:
+  credentials:
+    - name: AWS Account
+      aws_access_key_id: ACCESS_KEY_ID_FROM_AWS
+      aws_secret_access_key: SECRET_ACCESS_KEY_ID_FROM_AWS
+  notify:
+    # use the first credential defined in aws integration by default
+    - service: sns
+      region_name: us-east-1
+      name: sns_us_east_1
+      credential_name: AWS Account
+      aws_access_key_id: ACCESS_KEY_ID_FROM_AWS
+      aws_secret_access_key: SECRET_ACCESS_KEY_ID_FROM_AWS
+```
+
 ## 3. TEST
 
 ![Untitled](https://user-images.githubusercontent.com/45504305/175666351-17ae6ab6-8bf1-418f-990a-cdb38f5ee5f7.png)
