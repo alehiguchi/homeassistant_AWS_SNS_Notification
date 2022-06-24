@@ -24,8 +24,8 @@ If you do not download them, you will lose them and will have to recreate a new 
 - Add the lines below to configuration.yaml
 
 aws:
-  credentials:
-    - name: AWS Account
+credentials:
+- name: AWS Account
     aws_access_key_id: [get the key id from previout steps]
     aws_secret_access_key: [get the access key from previout steps]
   notify:
